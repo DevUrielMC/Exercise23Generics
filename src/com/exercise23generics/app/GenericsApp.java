@@ -1,5 +1,6 @@
 package com.exercise23generics.app;
 import com.exercise23generics.model.Suma;
+import com.exercise23generics.model.Multi;
 import com.exercise23generics.model.Resta;
 
 public class GenericsApp {
@@ -8,6 +9,7 @@ public class GenericsApp {
 	{
 		Suma<Integer> miObjeto = new Suma<Integer>(15);
 		Suma<String> miObjetoString = new Suma<String>("Testo");
+		
 		Resta<Integer, Integer> miObjetoResta = new Resta<Integer, Integer>(10, 20);
 		Resta<Integer, Integer> miObjetoResta2 = new Resta<Integer, Integer>();
 
@@ -19,5 +21,12 @@ public class GenericsApp {
 		miObjetoResta2.setValue(200);
 		System.out.println("Objeto Resta1:"+miObjetoResta.ToString());
 		System.out.println("Objeto Resta2:"+miObjetoResta2.ToString());
+		
+		System.out.println(Multi.MuestraTipoDato(10));
+		System.out.println(Multi.MuestraTipoDato("El macho"));
+		System.out.println(Multi.MuestraTipoDato(10.0));
+		
+		System.out.println("10.0+10.0= "+Suma.SumaNumeros(10, 10));
+		
 	}
 }
